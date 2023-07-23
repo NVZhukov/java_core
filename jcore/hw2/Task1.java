@@ -30,7 +30,6 @@ public class Task1 {
         for (int i = 0; i < array.length; i++) {
             temp[array[i] - min]++;
         }
-        System.out.println(Arrays.toString(temp));
         int index = 0;
         for (int i = 0; i < temp.length; i++) {
             for (int j = temp[i]; j > 0; j--) {
