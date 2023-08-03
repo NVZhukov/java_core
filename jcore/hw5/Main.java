@@ -2,15 +2,17 @@ package ru.gb.jcore.hw5;
 
 import java.io.*;
 import java.nio.file.*;
-
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 public class Main {
     private static final String BACKUP_PATH = "./backup";
 
     public static void main(String[] args) {
+        int[] gameField = {0, 1, 2, 3, 0, 1, 1, 2, 0};
         try {
             createBackup(".");
+            TicTacToe.writeGameField(gameField);
+            TicTacToe.printGameField(TicTacToe.readGameField("XO.txt"));
         } catch (NullPointerException | IOException e) {
             e.printStackTrace();
         }
